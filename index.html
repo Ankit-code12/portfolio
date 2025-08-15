@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ankit Chauhan | Portfolio</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+<style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { 
+        font-family: 'Poppins', sans-serif;
+        line-height: 1.6;
+        background: linear-gradient(270deg, #007BFF, #00BFFF, #6a5acd);
+        background-size: 600% 600%;
+        animation: bgAnimation 12s ease infinite;
+        transition: background-color 0.3s, color 0.3s;
+    }
+    @keyframes bgAnimation {
+        0% { background-position: 0% 50%; }
+        50% { background-position: 100% 50%; }
+        100% { background-position: 0% 50%; }
+    }
+    body.dark {
+        background: #121212;
+        color: white;
+    }
+    header {
+        text-align: center;
+        padding: 2rem 1rem;
+    }
+    header img {
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        border: 4px solid white;
+        margin-bottom: 1rem;
+    }
+    header h1 { font-size: 2rem; }
+    header p { font-size: 1rem; margin-top: .5rem; }
+    .container {
+        width: 90%;
+        max-width: 1100px;
+        margin: auto;
+        padding: 2rem 0;
+    }
+    h2 {
+        text-align: center;
+        margin-bottom: 1rem;
+        color: #fff;
+    }
+    body.dark h2 { color: #00BFFF; }
+    .projects {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 1.5rem;
+    }
+    .card {
+        background: white;
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        transition: transform 0.3s ease;
+    }
+    .card:hover { transform: scale(1.03); }
+    .card img {
+        width: 100%;
+        height: 180px;
+        object-fit: cover;
+    }
+    .card-body { padding: 1rem; }
+    .card-body h3 { margin-bottom: 0.5rem; color: #007BFF; }
+    .card-body p { font-size: 0.9rem; margin-bottom: 1rem; }
+    .card-body a {
+        text-decoration: none;
+        color: white;
+        background: #007BFF;
+        padding: 0.5rem 1rem;
+        border-radius: 5px;
+        display: inline-block;
+    }
+    footer {
+        text-align: center;
+        background: rgba(0,0,0,0.7);
+        color: white;
+        padding: 1rem;
+        margin-top: 2rem;
+    }
+    footer a { color: #00BFFF; }
+    #darkModeToggle {
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        background: white;
+        border: none;
+        padding: 0.5rem 1rem;
+        border-radius: 20px;
+        cursor: pointer;
+        font-weight: bold;
+        box-shadow: 0px 4px 8px rgba(0,0,0,0.2);
+    }
+</style>
+</head>
+<body>
+
+<!-- Dark Mode Button -->
+<button id="darkModeToggle">🌙 Dark Mode</button>
+
+<!-- HEADER -->
+<header>
+    <img src="https://i.pravatar.cc/150?img=12" alt="Ankit Chauhan">
+    <h1>Ankit Chauhan</h1>
+    <p>MCA Student | Full Stack Developer | Python & Django Enthusiast</p>
+</header>
+
+<!-- PROJECTS -->
+<div class="container">
+    <h2>Projects</h2>
+    <div class="projects">
+        <div class="card">
+            <img src="https://via.placeholder.com/400x180/007BFF/ffffff?text=Amazon+Clone" alt="Amazon Clone">
+            <div class="card-body">
+                <h3>Amazon Clone</h3>
+                <p>Full-stack e-commerce platform built with HTML, CSS, Django, and Tkinter.</p>
+                <a href="#">View Project</a>
+            </div>
+        </div>
+        <div class="card">
+            <img src="https://via.placeholder.com/400x180/28a745/ffffff?text=Hospital+Management" alt="Hospital Management">
+            <div class="card-body">
+                <h3>Hospital Management</h3>
+                <p>Python-based GUI system with database integration for hospital operations.</p>
+                <a href="#">View Project</a>
+            </div>
+        </div>
+        <div class="card">
+            <img src="https://via.placeholder.com/400x180/ffc107/000000?text=Tiffin+Service" alt="Tiffin Service App">
+            <div class="card-body">
+                <h3>Tiffin Service App</h3>
+                <p>Django backend with animated Python GUI for meal booking and delivery.</p>
+                <a href="#">View Project</a>
+            </div>
+        </div>
+        <div class="card">
+            <img src="https://via.placeholder.com/400x180/d63384/ffffff?text=Typing+Speed" alt="Typing Speed Calculator">
+            <div class="card-body">
+                <h3>Typing Speed Calculator</h3>
+                <p>Python tool with difficulty levels, animations, and automatic transitions.</p>
+                <a href="#">View Project</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- CONTACT -->
+<div class="container">
+    <h2>Contact</h2>
+    <p style="text-align:center;">
+        📧 Email: <a href="mailto:ankitc9837420317@gmail.com">ankitc9837420317@gmail.com</a> <br>
+        💼 LinkedIn: <a href="https://www.linkedin.com/in/ankit-chauhan962" target="_blank">linkedin.com/in/ankit-chauhan962</a> <br>
+        🖥 GitHub: <a href="https://github.com/Ankit-code12" target="_blank">github.com/Ankit-code12</a>
+    </p>
+</div>
+
+<footer>
+    <p>© 2025 Ankit Chauhan | Built with ❤️ using HTML, CSS & JS</p>
+</footer>
+
+<script>
+    const toggleBtn = document.getElementById("darkModeToggle");
+    toggleBtn.addEventListener("click", () => {
+        document.body.classList.toggle("dark");
+        toggleBtn.textContent = document.body.classList.contains("dark") ? "☀ Light Mode" : "🌙 Dark Mode";
+    });
+</script>
+
+</body>
+</html>
